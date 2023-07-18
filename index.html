@@ -4,21 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha384-...your-integrity-hash-goes-here..."
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Stop Watch</title>
   </head>
   <body>
     <div class="container">
       <div id="time">
-        <span class="minute">00</span>
-        <span class="second">00</span>
-        <span class="millisecond">000</span>
+        <span class="minute" id="display">00</span>
+        <span class="second" id="display">00</span>
+        <span class="millisecond" id="display">000</span>
       </div>
       <br />
       <div class="buttons">
-        <button type="button" id="start">Start</button>
-        <button type="button" id="stop">Stop</button>
-        <button type="button" id="reset">Reset</button>
+        <button type="button" id="start"><i class="fas fa-play"></i></button>
+        <button type="button" id="stop"><i class="fas fa-stop"></i></button>
+        <button type="button" id="reset">
+          <i class="fas fa-trash-restore-alt"></i>
+        </button>
       </div>
     </div>
     <script type="module" src="./src/init.js"></script>

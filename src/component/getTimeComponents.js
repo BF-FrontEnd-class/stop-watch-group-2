@@ -1,16 +1,24 @@
 import { data, dom } from '../data.js';
+import { getWatchTime } from '../utils/getWatchTime.js';
 
+// debugger;
 export const getTimeComponents = () => {
+  const watchData = getWatchTime();
+
   dom.timeMinute.innerText =
-    data.minutes < 10 ? '0' + data.minutes : data.minutes;
+    watchData.minutes < 10
+      ? '0' + watchData.minutes + ' : '
+      : watchData.minutes + ' : ';
 
   dom.timeSeconde.innerText =
-    data.seconds < 10 ? '0' + data.seconds : data.seconds;
+    watchData.seconds < 10
+      ? '0' + watchData.seconds + ' : '
+      : watchData.seconds + ' : ';
 
   dom.timeMillisecond.innerText =
-    data.milliseconds < 10
-      ? '00' + data.milliseconds
-      : data.milliseconds < 100
-      ? '0' + data.milliseconds
-      : data.milliseconds;
+    watchData.milliseconds < 10
+      ? '00' + watchData.milliseconds
+      : watchData.milliseconds < 100
+      ? '0' + watchData.milliseconds
+      : watchData.milliseconds;
 };

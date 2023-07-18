@@ -1,2 +1,3 @@
 import './event/startListener.js';
-debugger;
+import './event/stopListener.js';
+import './event/resetListener.js';

@@ -1,16 +1,12 @@
 import { data } from '../data.js';
 import { getTimeComponents } from '../component/getTimeComponents.js';
 
-export const resetHandler = () => {
+export const stopHandler = () => {
   debugger;
-  if (data.intervalId === null) {
+  const watchData = getTimeComponents();
+  if (data.intervalId) {
+    console.log(data.intervalId);
     clearInterval(data.intervalId);
     data.intervalId = null;
   }
-
-  data.minutes = 0;
-  data.seconds = 0;
-  data.milliseconds = 0;
-
-  getTimeComponents();
 };

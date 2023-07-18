@@ -3,11 +3,12 @@ import { getWatchTime } from '../utils/getWatchTime.js';
 import { getTimeComponents } from '../component/getTimeComponents.js';
 
 export const startHandler = () => {
-  if (data.intervalId !== null) {
-    data.intervalId = clearInterval(data.intervalId);
+  const watchData = getWatchTime();
+  if (watchData.intervalId !== null) {
+    watchData.intervalId = clearInterval(watchData.intervalId);
   }
 
-  data.intervalId = setInterval(() => {
-    getTimeComponent();
+  watchData.intervalId = setInterval(() => {
+    getTimeComponents();
   }, 10);
 };
