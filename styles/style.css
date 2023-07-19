@@ -3,6 +3,8 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fafafa;
+  background-image: url('../assets/luke-chesser.jpg');
+  background-size: cover;
 }
 
 .container {
