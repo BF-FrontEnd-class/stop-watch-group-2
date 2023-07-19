@@ -1,7 +1,6 @@
 import { data, dom } from '../data.js';
 import { getWatchTime } from '../utils/getWatchTime.js';
 
-// debugger;
 export const getTimeComponents = () => {
   const watchData = getWatchTime();
 
