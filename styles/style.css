@@ -44,23 +44,10 @@ body {
 .time {
   width: 525px;
 }
-/* 
-.minutes
-{
-    width: 100px;
-}
 
-.seconds
-{
-    width: 100px;
-}
-
-.milliseconds
-{
-    width: 100px;
-} */
-
-#display {
+.minute,
+.second,
+.millisecond {
   font-family: Orbitron, sans-serif;
   color: #008000;
   font-weight: 600;

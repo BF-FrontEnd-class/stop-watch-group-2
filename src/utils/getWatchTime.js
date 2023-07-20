@@ -1,8 +1,6 @@
 import { data } from '../data.js';
 
 export const getWatchTime = () => {
-  // debugger;
-
   data.milliseconds += 10;
 
   if (data.milliseconds === 1000) {
@@ -18,7 +16,4 @@ export const getWatchTime = () => {
   if (data.minutes === 60) {
     data.minutes = 0;
   }
-  // console.log(data);
-
-  return data;
 };
